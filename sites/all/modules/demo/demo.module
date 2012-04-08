@@ -1,0 +1,26 @@
+<?php
+
+/*
+* Implements hook_permission()
+
+
+function demo_permission() {
+
+	//krumo($node);
+	return array(
+		'administer demo module' => array(
+			'title' => t('');
+		),
+	);
+}*/
+
+function demo_forms( $form_id, $args) {
+	//krumo($form_id);
+}
+
+/*
+ * hook_form_alter(&$form, &$form_state, $form_id)
+ */
+ function demo_form_alter( &$form, &$form_state, $form_id) {
+	//krumo($form_id);
+}
