@@ -70,6 +70,7 @@ blockquote {
 
 #wrapper {
     overflow: hidden;
+	background-image: url("../images/bg_image.png");
 }
 
 header#mainheader {
@@ -189,7 +190,7 @@ ul#siteNav li {
  * main content styles
 */
 #middleblock {
-    background: url("images/global/page.png") repeat-y scroll 0 0 #FFFFFF;
+    /*background: url("../images/global/page.png") repeat-y scroll 0 0 #FFFFFF;
     border: 1px solid #DDDDDD;
     /*padding-bottom: 80px;*/
 }
