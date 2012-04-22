@@ -1,6 +1,8 @@
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> newsarea clearfix"<?php print $attributes; ?>>
 
-  <?php //print $user_picture; ?>
+  <?php if(isset($people_type)) : ?>
+  	<?php print render($people_type); ?>
+  <?php endif; ?>
 
   <?php //print render($title_prefix); ?>
   <?php if (!$page): ?>
@@ -19,6 +21,7 @@
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
+      //dsm($content);
       //krumo($content);
       print render($content);
     ?>
