@@ -1,16 +1,18 @@
 
 <div id="wrapper" class="container_16">
 
-	<?php if ($page['header']): ?>
 	<header id="mainheader" class="grid_16">
-		<section id="logo" class="grid_11 alpha">
+	<?php if ($page['header']): ?>
+	<?php print render($page['header']['block_1']['#markup']); ?>
+		<!-- <section id="logo" class="grid_11 alpha">
 			<h1>
 				<a href="#">Single Molecule <span>Bioscience</span></a>
 			</h1>
 		</section>
 		<aside id="logo_unsw" class="grid_5 omega">
 			<h1>@unsw</h1>
-		</aside>
+		</aside> -->
+	<?php endif; ?>
         <?php if ($main_menu): ?>
             <nav id="mainNav" class="grid_16">
 			<h1>Main page navigation</h1>
@@ -19,7 +21,7 @@
 		<!-- /.section, /#navigation -->
         <?php endif; ?>
     </header>
-    <?php endif; ?>
+
 
 	<section id="middleblock" class="grid_16">
 
@@ -27,7 +29,7 @@
 		
 		<?php if ($page['content']) :?>
         <article id="textblock" class="grid_8 alpha">
-            <a id="main-content"></a>
+			<a id="main-content"></a>
             <?php print render($title_prefix); ?>
             <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
             <?php print render($title_suffix); ?>

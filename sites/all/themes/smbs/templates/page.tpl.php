@@ -35,18 +35,13 @@
 		</header>
 		<?php endif; ?>
 
-
-        <?php 
-        	print $messages;
-        	//krumo($page['content']); 
-        ?>
+        <?php print $messages; ?>
 
         <a id="main-content"></a>
-        <?php //print render($title_prefix); ?>
-
-        <?php //print render($title_suffix); ?>
-        
-        <?php //print render($page['help']); ?>
+        <?php print render($title_prefix); ?>
+        <?php print render($title_suffix); ?>
+        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+        <?php print render($page['help']); ?>
         <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
 
         <?php print render($page['content']); ?>
@@ -54,10 +49,13 @@
 		<?php if ($page['footer']): ?>
         <footer id="mainfooter" class="">
 			<div id="box">
+				<?php print render($page['footer']); ?>
+				<!-- 
 				<img width="15" height="15" alt="Developer"
 					src="images/icons/developer.png"> Developed by <a
 					href="http://javedweb.com/">Javed Gardezi</a> and <a href="#">
 					Samuel</a>
+				-->
 			</div>
 		</footer>
 		<?php endif; ?>
