@@ -363,7 +363,7 @@ section#middleArea {
     position: relative;
 }
 section#middleArea #map_canvas {
-    height: 260px;
+    height: 280px;
     margin: 35px 40px;
     width: 860px;
 }

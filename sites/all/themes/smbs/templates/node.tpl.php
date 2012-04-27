@@ -15,14 +15,13 @@
       Posted <?php print $date; ?> by <?php print $name; ?> in <?php print $type; ?>
     </p>
   <?php endif; ?>
-
   
     <?php
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
       //dsm($content);
-      //krumo($content);
+      //	($content);
       print render($content);
     ?>
   

@@ -20,24 +20,18 @@
 
 	<section id="textArea" class="grid_16">
 	<?php //if ( !empty($vocabulary_type)) krumo($vocabulary_type); ?>
+	<?php //krumo($page);?>
+		
+		<?php if($secondary_menu): ?>
         <header id="newsHd" class="">
-			<nav id="pageNav" class="">
+        	<nav id="pageNav" class="">
 				<hgroup>
 					<h1>News page navigation</h1>
-					<!-- <h2>Archive</h2>  -->
 				</hgroup>
-				
-				<?php if($secondary_menu): ?>
-        			<?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'newsNav', 'class' => array('links', 'inline', 'clearfix')) )); ?>
-        		<?php endif; ?>
-				<!-- 
-				<ul id="newsNav">
-					<li><a href="#">Feb 2012</a></li>
-					<li><a href="#">Jan 2012</a></li>
-					<li><a href="#" class="last">Dec 2011</a></li>
-				</ul>  -->
+				<?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'newsNav', 'class' => array('links', 'inline', 'clearfix')) )); ?>
 			</nav>
 		</header>
+		<?php endif; ?>
 
 
         <?php 
@@ -45,17 +39,17 @@
         	//krumo($page['content']); 
         ?>
 
-        <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
         <a id="main-content"></a>
         <?php //print render($title_prefix); ?>
 
         <?php //print render($title_suffix); ?>
-        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+        
         <?php //print render($page['help']); ?>
         <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
 
         <?php print render($page['content']); ?>
-
+		
+		<?php if ($page['footer']): ?>
         <footer id="mainfooter" class="">
 			<div id="box">
 				<img width="15" height="15" alt="Developer"
@@ -64,6 +58,7 @@
 					Samuel</a>
 			</div>
 		</footer>
+		<?php endif; ?>
 
 	</section>
 

@@ -7,12 +7,13 @@ function smbs_node_view($node, $view_mode, $langcode) {
 	//krumo($node);
 }
 
+/*
 function smbs_preprocess_page( &$vars ) {
 	$vocabulary_type = array();
 	//$types = _node_types_build()->types;
 	static $i = 0;
-	//krumo($vars);
 	$tmp = $vars['secondary_menu'];
+	krumo("I am here");
 	if ( count($tmp) != 0 || !empty($tmp)  ) {
 		foreach ( $tmp as $attribute => $val ) :
 			$href = $val['href'];
@@ -26,7 +27,8 @@ function smbs_preprocess_page( &$vars ) {
 	//kpr($vars);
 	//kpr($vars);
 	//echo "I am here";
-}	
+}*/
+	
 function smbs_preprocess_node(&$vars) {
 	static $i = 0;
 	static $voca_id = array();
@@ -59,7 +61,7 @@ function smbs_page_alter(&$page) {
 }
 //field_view_field
 function smbs_view_field($entity_type, $entity, $field_name, $display = array(), $langcode = NULL) {
-	krumo($entity_type);
+	//krumo($entity_type);
 }
 
 /**
