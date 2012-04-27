@@ -1,5 +1,6 @@
 <div id="wrapper" class="container_16">
 
+	<?php if ($page['header']): ?>
 	<header id="mainheader" class="grid_16">
 		<section id="logo" class="grid_11 alpha">
 			<h1>
@@ -16,7 +17,8 @@
             </nav>
 		<!-- /.section, /#navigation -->
         <?php endif; ?>
-		</header>
+	</header>
+	<?php endif; ?>
 
 	<section id="middleArea" class="grid_16">
 		<?php print $messages; ?>

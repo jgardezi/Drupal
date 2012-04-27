@@ -69,7 +69,9 @@ blockquote {
 
 #wrapper {
     overflow: hidden;
-	background-image: url("../images/bg_image.png");
+	background-image: url("../images/bg_image.jpg");
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
 }
 
 header#mainheader {

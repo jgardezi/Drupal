@@ -1,5 +1,6 @@
 <div id="wrapper" class="container_16">
 
+	<?php if ($page['header']): ?>
 	<header id="mainheader" class="grid_16">
 		<section id="logo" class="grid_11 alpha">
 			<h1>
@@ -17,7 +18,8 @@
 		<!-- /.section, /#navigation -->
         <?php endif; ?>
     </header>
-
+	<?php endif; ?>
+	
 	<section id="textArea" class="grid_16">
 	<?php //if ( !empty($vocabulary_type)) krumo($vocabulary_type); ?>
 	<?php //krumo($page);?>
