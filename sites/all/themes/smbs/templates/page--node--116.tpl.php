@@ -38,12 +38,9 @@
 		<?php endif; ?>
 		
 		<?php if ($page['footer']): ?>
-		<footer id="mainfooter" class="">
+        <footer id="mainfooter" class="">
 			<div id="box">
-				<img width="15" height="15" alt="Developer"
-					src="images/icons/developer.png"> Developed by <a
-					href="http://javedweb.com/">Javed Gardezi</a> and <a href="#">
-					Samuel</a>
+				<?php print render($page['footer']); ?>
 			</div>
 		</footer>
 		<?php endif; ?>

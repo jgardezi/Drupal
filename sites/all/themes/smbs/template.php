@@ -39,12 +39,12 @@ function smbs_preprocess_node(&$vars) {
 		if ( $i == 0 ) { 
 			$voca_id[$i] = $node->field_ptype['und']['0']['tid'];
 			$terms = taxonomy_term_load( $node->field_ptype['und']['0']['tid'] );
-			$vars['people_type'] = $terms->name;
+			$vars['people_type'] = t("<h1>".$terms->name."</h1>");
 			$i++;
 		} else {
 			if ($voca_id[$i-1] != $node->field_ptype['und']['0']['tid'] ) {
 				$terms = taxonomy_term_load( $node->field_ptype['und']['0']['tid'] );
-				$vars['people_type'] = $terms->name;
+				$vars['people_type'] = t("<h1>".$terms->name."</h1>");
 				$voca_id[$i] = $node->field_ptype['und']['0']['tid'];
 				$i++;
 			}

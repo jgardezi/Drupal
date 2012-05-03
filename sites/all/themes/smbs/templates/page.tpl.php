@@ -1,5 +1,5 @@
 <div id="wrapper" class="container_16">
-
+	
 	<?php if ($page['header']): ?>
 	<header id="mainheader" class="grid_16">
 		<section id="logo" class="grid_11 alpha">
@@ -50,12 +50,6 @@
         <footer id="mainfooter" class="">
 			<div id="box">
 				<?php print render($page['footer']); ?>
-				<!-- 
-				<img width="15" height="15" alt="Developer"
-					src="images/icons/developer.png"> Developed by <a
-					href="http://javedweb.com/">Javed Gardezi</a> and <a href="#">
-					Samuel</a>
-				-->
 			</div>
 		</footer>
 		<?php endif; ?>

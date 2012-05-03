@@ -43,34 +43,20 @@
         <?php endif; ?>
 
         <?php if ($is_front): ?>
-            <aside id="animationArea" class="grid_8 omega">
-			<div class="slider-wrapper theme-default">
-				<div class="ribbon"></div>
-				<div id="slider" class="nivoSlider">
-					<img src="images/toystory.jpg" alt="" /> <a
-						href="http://dev7studios.com"><img src="images/up.jpg" alt=""
-						title="This is an example of a caption" /></a> <img
-						src="images/walle.jpg" alt="" data-transition="slideInLeft" /> <img
-						src="images/nemo.jpg" alt="" title="#htmlcaption" />
-				</div>
-				<div id="htmlcaption" class="nivo-html-caption">
-					<strong>This</strong> is an example of a <em>HTML</em> caption with
-					<a href="#">a link</a>.
-				</div>
-			</div>
-		</aside>
+        <?php if ($page['right']): ?>
+        <aside id="animationArea" class="grid_8 omega">
+        	<?php print render($page['right']); ?>
+		 </aside>
+		<?php endif; ?>
         <?php endif; ?>
         
         <?php if ($page['footer']): ?>
         <footer id="mainfooter" class="">
 			<div id="box">
-				<img width="15" height="15" alt="Developer"
-					src="images/icons/developer.png"> Developed by <a
-					href="http://javedweb.com/">Javed Gardezi</a> and <a href="#">
-					Samuel</a>
+				<?php print render($page['footer']); ?>
 			</div>
 		</footer>
-		<?php endif;?>
+		<?php endif; ?>
 		
 	</section>
 
